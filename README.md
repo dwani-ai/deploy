@@ -57,6 +57,16 @@ Each service is modular and can be set up independently. See linked docs for det
 
 - deployment is optimised for arm64, VRAM > 80GB 
 
+- vllm 
+  - python wheel installation
+    - 3.10
+      - pip install https://github.com/dwani-ai/vllm-arm64/releases/download/v0.0.5/vllm-0.10.1.dev0+g6d8d0a24c.d20250726-cp310-cp310-linux_aarch64.whl
+    - 3.12
+      - pip install https://github.com/dwani-ai/vllm-arm64/releases/download/v.0.0.4/vllm-0.10.1.dev0+g6d8d0a24c.d20250726-cp312-cp312-linux_aarch64.whl
+  - docker images
+    - dwani/vllm-openai:latest
+    -   sudo docker run --gpus all -p 8000:8000 vllm/vllm-openai --model Qwen/Qwen3-0.6B --port 8000
+
 --- 
 
 ## Model Dependencies
