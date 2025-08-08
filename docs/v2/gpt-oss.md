@@ -19,7 +19,6 @@ vllm serve openai/gpt-oss-120b
 git clone https://github.com/vllm-project/vllm.git
 
 cd vllm
-git checkout releases/gpt-oss
 
 pip install torch==2.7.1 torchaudio==2.7.1 torchvision --index-url https://download.pytorch.org/whl/cu128
 
@@ -32,7 +31,7 @@ pip install --upgrade setuptools twine setuptools-scm
 pip install -r requirements/cuda.txt
 
 export MAX_JOBS=16
-export NVCC_THREADS=2
+export NVCC_THREADS=4
 export TORCH_CUDA_ARCH_LIST=""
 export VLLM_TARGET_DEVICE=cuda
 
