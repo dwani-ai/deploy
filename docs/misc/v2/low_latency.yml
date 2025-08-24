@@ -1,0 +1,7 @@
+enable_attention_dp: false
+enable_mixed_sampler: true
+cuda_graph_config:
+    max_batch_size: 8
+    enable_padding: true
+moe_config:
+    backend: TRITON
